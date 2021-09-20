@@ -1,0 +1,59 @@
+@mixin text(
+    $color: red,
+    $height: 1rem,
+    $with: 3rem
+) {
+    font-size: 1rem;
+    height: $height;
+    width: $with;
+    color: $color;
+}
+
+@mixin button(
+    $type: normal,
+    $height: 1rem,
+    $with: 3rem
+) {
+    $background-color: black;
+    $background-color-hover: black;
+    @if $type == 'success' {
+        $background-color: #EA4C89;
+        $background-color-hover: rgb(139, 92, 179);
+    }
+    @if $type == 'normal' {
+        $background-color: #4cb8ea;
+        $background-color-hover: rgb(139, 92, 179);
+    }
+    @if $type == 'close' {
+        $background-color: #848b7a;
+        $background-color-hover: rgb(64, 56, 71);
+    }
+    background-color: $background-color;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+          
+    &:hover {
+      background-color: $background-color-hover;
+    }
+}

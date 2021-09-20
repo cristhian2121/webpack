@@ -1,6 +1,21 @@
 @import './variables.scss';
+@import './mixin.scss';
 
 body {
     color: $primary-color;
     background-color: $secondary-color;
+}
+
+.text {
+    @include text($color: black)
+}
+
+// %message-shared {
+// }
+
+.success-button {
+    @include button($type: success)
+}
+.close-button {
+    @include button($type: close)
 }
